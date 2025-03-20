@@ -17,8 +17,7 @@ class ListaTarefasActivity : AppCompatActivity(R.layout.activity_lista_tarefas) 
         val dao = TarefaDao()
         val tarefas = dao.get_tarefas()
         val rv_tarefas = findViewById<RecyclerView>(R.id.rv_tarefas)
-        val layout_manager = LinearLayoutManager(this)
-        rv_tarefas.layoutManager = layout_manager
+        rv_tarefas.layoutManager = LinearLayoutManager(this)
         rv_tarefas.adapter = TarefaAdapter(tarefas)
     }
 }
